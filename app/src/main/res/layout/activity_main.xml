@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    android:layout_height="match_parent"
+    tools:context="id.futnet.praktikumprogmobm5.MainActivity">
+    <Button
+        android:id="@+id/Button_tambah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tambah Member"
+        android:onClick="tambahMember"/>
+    <Button
+        android:id="@+id/Button_lihat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lihat Member"
+        android:onClick="getMember"/>
+</LinearLayout>
