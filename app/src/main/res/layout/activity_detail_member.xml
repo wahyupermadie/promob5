@@ -7,26 +7,77 @@
     android:orientation="vertical"
     android:layout_gravity="center_horizontal"
     tools:context="id.futnet.praktikumprogmobm5.DetailMemberActivity">
-    <ImageView
-        android:id="@+id/IV_memberDetail"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_margin="10dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/IV_memberDetail"
+        android:src="@drawable/ava"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/TV_nama"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="Nama"
-            android:textSize="30sp"/>
+            android:textStyle="bold"
+            android:textSize="20dp"/>
         <TextView
+            android:layout_alignBaseline="@id/TV_namaLengkap"
             android:id="@+id/TV_namaLengkap"
             android:layout_marginLeft="10dp"
-            android:textSize="30dp"
+            android:textSize="15dp"
+            android:layout_toRightOf="@+id/TV_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textStyle="bold"
+            android:layout_below="@+id/TV_nama"
+            android:id="@+id/TV_email"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_alignBaseline="@id/TV_email"
+            android:layout_below="@id/TV_namaLengkap"
+            android:id="@+id/TV_emailLengkap"
+            android:layout_marginLeft="10dp"
+            android:textSize="15dp"
+            android:layout_toRightOf="@+id/TV_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textStyle="bold"
+            android:layout_below="@id/TV_email"
+            android:id="@+id/TV_sex"
+            android:text="JK"
+            android:textSize="20dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_alignBaseline="@id/TV_sex"
+            android:layout_below="@id/TV_emailLengkap"
+            android:id="@+id/TV_sexLengkap"
+            android:layout_marginLeft="10dp"
+            android:textSize="15dp"
             android:layout_toRightOf="@+id/TV_nama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </RelativeLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DELETE"
+            android:onClick="deleteUser"/>
+    </LinearLayout>
 </LinearLayout>

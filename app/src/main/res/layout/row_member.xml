@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:layout_margin="10dp"
+    android:background="@color/colorPrimary"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -9,6 +11,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/CV_member">
         <RelativeLayout
+            android:background="@color/colorAccent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp">
@@ -49,21 +52,7 @@
                 android:layout_toRightOf="@id/IV_member"
                 android:layout_below="@id/TV_email"
                 android:text="Belajar"/>
-            <TextView
-                android:id="@+id/TV_tinggi"
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/TV_name"
-                android:text="20"
-                android:textSize="17sp"/>
-            <TextView
-                android:paddingLeft="5dp"
-                android:textSize="17sp"
-                android:text="Cm"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/TV_tinggi"/>
+
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

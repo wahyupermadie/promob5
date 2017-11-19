@@ -112,13 +112,13 @@ public class MemberActivity extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                Toast.makeText(MemberActivity.this, "SUKSES"+response, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MemberActivity.this, "SUKSES MENAMBAH MEMBER", Toast.LENGTH_SHORT).show();
                 progress.dismiss();
             }
 
             @Override
             public void onFailure(Call<JSONObject> call, Throwable t) {
-                Toast.makeText(MemberActivity.this, "GAGAL"+t, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MemberActivity.this, "GAGAL", Toast.LENGTH_SHORT).show();
                 progress.dismiss();
             }
         });

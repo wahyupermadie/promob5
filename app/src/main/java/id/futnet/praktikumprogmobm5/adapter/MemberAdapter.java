@@ -42,7 +42,6 @@ public class MemberAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         ((Member)holder).TV_name.setText(memberList.get(position).getNama());
         ((Member)holder).TV_email.setText(memberList.get(position).getEmail());
-        ((Member)holder).TV_tinggi.setText(memberList.get(position).getTinggi());
         ((Member)holder).TV_hobi.setText(memberList.get(position).getHobi());
         ((Member)holder).TV_kelamin.setText(memberList.get(position).getKelamin());
         Glide.with(context).load("http://192.168.43.105:8000/images/"+memberList.get(position).getPicture()).into(((Member)holder).IV_member);
@@ -57,7 +56,6 @@ public class MemberAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     private class Member extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView TV_name;
         TextView TV_email;
-        TextView TV_tinggi;
         TextView TV_kelamin;
         TextView TV_hobi;
         CircleImageView IV_member;
@@ -68,7 +66,6 @@ public class MemberAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             TV_email = view.findViewById(R.id.TV_email);
             IV_member = view.findViewById(R.id.IV_member);
             TV_hobi = view.findViewById(R.id.TV_hobi);
-            TV_tinggi = view.findViewById(R.id.TV_tinggi);
             view.setOnClickListener(this);
         }
 

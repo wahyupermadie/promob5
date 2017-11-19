@@ -9,6 +9,7 @@ import id.futnet.praktikumprogmobm5.model.MemberList;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import retrofit2.Call;
+import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -31,13 +32,14 @@ public interface ApiInterface {
     Call<List<MemberList>> getMember();
 
     @FormUrlEncoded
-    @POST("member/{id}")
+    @POST("member")
     Call<JSONObject> register(@Field("Nama") String nama,
                               @Field("Email") String email,
                               @Field("Sex") String sex,
                               @Field("Picture") String image);
 
-
+    @DELETE("member/{id}")
+    Call<MemberList> getDetele(@Path("id") String id);
 
 
 }
