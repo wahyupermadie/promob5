@@ -16,6 +16,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.PATCH;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Part;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
@@ -41,5 +42,11 @@ public interface ApiInterface {
     @DELETE("member/{id}")
     Call<MemberList> getDetele(@Path("id") String id);
 
-
+    @FormUrlEncoded
+    @PUT("member/update/{id}")
+    Call<JSONObject> getUpdate(@Path("id") String id,
+                               @Field("Nama") String nama,
+                               @Field("Email") String email,
+                               @Field("Picture") String image,
+                               @Field("Sex") String sex);
 }

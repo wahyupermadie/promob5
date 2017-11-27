@@ -1,6 +1,7 @@
 package id.futnet.praktikumprogmobm5;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -40,6 +41,16 @@ public class DetailMemberActivity extends AppCompatActivity {
     @BindView(R.id.TV_sexLengkap) TextView txtSex;
     @BindView(R.id.TV_namaLengkap) TextView txtNama;
     @BindView(R.id.IV_memberDetail) ImageView imageView;
+    @OnClick(R.id.btnUpdate) public void updateUser(View view){
+        Intent intent = new Intent(this,UpdateActivity.class);
+        response = getIntent().getStringExtra("id_member");
+        intent.putExtra("id",response);
+        intent.putExtra("nama", nama);
+        intent.putExtra("email",email);
+        intent.putExtra("image",image);
+        intent.putExtra("sex",sex);
+        startActivity(intent);
+    }
     @OnClick(R.id.btnDelete)  public void deleteUser(View view) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setTitle("Peringatan");

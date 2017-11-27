@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".ListActivity" />
         <activity android:name=".MemberActivity" />
-        <activity android:name=".DetailMemberActivity"></activity>
+        <activity android:name=".DetailMemberActivity" />
+        <activity android:name=".UpdateActivity"></activity>
     </application>
 
 </manifest>
