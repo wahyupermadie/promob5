@@ -125,9 +125,9 @@ public class UpdateActivity extends AppCompatActivity {
         image = intent.getStringExtra("image");
         txtName.setText(nama);
         txtEmail.setText(email);
-        if(sex.equals("Laki - Laki")){
+        if(sex.equals("1")){
             rbMen.setChecked(true);
-        }else if(sex.equals("Wanita")){
+        }else if(sex.equals("2")){
             rbWomen.setChecked(true);
         }
         else{

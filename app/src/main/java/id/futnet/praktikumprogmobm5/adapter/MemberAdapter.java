@@ -43,7 +43,7 @@ public class MemberAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         ((Member)holder).TV_name.setText(memberList.get(position).getNama());
         ((Member)holder).TV_email.setText(memberList.get(position).getEmail());
         ((Member)holder).TV_hobi.setText(memberList.get(position).getHobi());
-        ((Member)holder).TV_kelamin.setText(memberList.get(position).getKelamin());
+        ((Member)holder).TV_kelamin.setText(memberList.get(position).getName_sex());
         Glide.with(context).load("http://192.168.43.105:8000/images/"+memberList.get(position).getPicture()).into(((Member)holder).IV_member);
     }
 

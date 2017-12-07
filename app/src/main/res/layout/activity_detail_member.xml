@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bg1"
+    android:background="@drawable/background"
     android:layout_gravity="center_horizontal"
     tools:context="id.futnet.praktikumprogmobm5.DetailMemberActivity">
     <de.hdodenhof.circleimageview.CircleImageView
@@ -31,17 +31,16 @@
             android:textSize="20dp"/>
         <TextView
             android:paddingStart="10dp"
-            android:layout_alignBaseline="@id/TV_namaLengkap"
+            android:layout_below="@id/TV_nama"
             android:id="@+id/TV_namaLengkap"
             android:layout_marginLeft="10dp"
             android:textSize="15dp"
-            android:layout_toRightOf="@+id/TV_nama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
             android:paddingStart="10dp"
             android:textStyle="bold"
-            android:layout_below="@+id/TV_nama"
+            android:layout_below="@+id/TV_namaLengkap"
             android:id="@+id/TV_email"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
@@ -49,35 +48,33 @@
             android:textSize="20dp"/>
         <TextView
             android:paddingStart="10dp"
-            android:layout_alignBaseline="@id/TV_email"
-            android:layout_below="@id/TV_namaLengkap"
+            android:layout_below="@id/TV_email"
             android:id="@+id/TV_emailLengkap"
             android:layout_marginLeft="10dp"
             android:textSize="15dp"
-            android:layout_toRightOf="@+id/TV_nama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
             android:paddingStart="10dp"
             android:textStyle="bold"
-            android:layout_below="@id/TV_email"
+            android:layout_below="@id/TV_emailLengkap"
             android:id="@+id/TV_sex"
             android:text="JK"
             android:textSize="20dp"
             android:layout_width="100dp"
             android:layout_height="wrap_content" />
         <TextView
+            android:paddingBottom="10dp"
             android:paddingStart="10dp"
-            android:layout_alignBaseline="@id/TV_sex"
-            android:layout_below="@id/TV_emailLengkap"
+            android:layout_below="@+id/TV_sex"
             android:id="@+id/TV_sexLengkap"
             android:layout_marginLeft="10dp"
             android:textSize="15dp"
-            android:layout_toRightOf="@+id/TV_nama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </RelativeLayout>
     <LinearLayout
+        android:gravity="center"
         android:orientation="horizontal"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"

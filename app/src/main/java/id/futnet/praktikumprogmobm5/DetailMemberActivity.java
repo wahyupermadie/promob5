@@ -34,7 +34,9 @@ import retrofit2.Retrofit;
 
 public class DetailMemberActivity extends AppCompatActivity {
     String response;
-    String nama, email, sex, image;
+    String nama, email, image;
+    String sex_id;
+    int sex;
     List<MemberList> memberList = new ArrayList<>();
     private ApiInterface apiInterface;
     @BindView(R.id.TV_emailLengkap) TextView txtEmail;
@@ -43,12 +45,13 @@ public class DetailMemberActivity extends AppCompatActivity {
     @BindView(R.id.IV_memberDetail) ImageView imageView;
     @OnClick(R.id.btnUpdate) public void updateUser(View view){
         Intent intent = new Intent(this,UpdateActivity.class);
+        sex_id = Integer.toString(sex);
         response = getIntent().getStringExtra("id_member");
         intent.putExtra("id",response);
         intent.putExtra("nama", nama);
         intent.putExtra("email",email);
         intent.putExtra("image",image);
-        intent.putExtra("sex",sex);
+        intent.putExtra("sex",sex_id);
         startActivity(intent);
     }
     @OnClick(R.id.btnDelete)  public void deleteUser(View view) {
@@ -101,7 +104,7 @@ public class DetailMemberActivity extends AppCompatActivity {
                 response.body();
                 nama = response.body().getNama();
                 email = response.body().getEmail();
-                sex = response.body().getKelamin();
+                sex = response.body().getSex_id();
                 image = response.body().getPicture();
                 setView();
             }
@@ -113,9 +116,15 @@ public class DetailMemberActivity extends AppCompatActivity {
         });
     }
     private void setView(){
+        String new_sex;
+        if(sex == 1){
+            new_sex = "Laki - Laki";
+        }else{
+            new_sex = "Perempuan";
+        }
         txtNama.setText(nama);
         txtEmail.setText(email);
-        txtSex.setText(sex);
+        txtSex.setText(new_sex);
         Glide.with(this).load("http://192.168.43.105:8000/images/"+image).into(imageView);
     }
 
